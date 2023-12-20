@@ -9,11 +9,7 @@ Contains the PowerShell scripts I use to get some extra info from HASS windows h
 
 ### Configuration
 >Set-ExecutionPolicy -ExecutionPolicy unrestricted
-
-
 >Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-
-
 >Unblock-File -Path $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge disk
 
 ### Parameters:
