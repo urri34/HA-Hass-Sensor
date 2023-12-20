@@ -7,10 +7,19 @@ Contains the PowerShell scripts I use to get some extra info from HASS windows h
 ### Solution:
 - Get the thru the PowerShellScript Sensor in HASS.Agent
 
+### Configuration
+>Set-ExecutionPolicy -ExecutionPolicy unrestricted
+
+
+>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+
+>Unblock-File -Path $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge disk
+
 ### Parameters:
 Getting the % disk usage: 
-> & 'C:\Users\orriolsv\AppData\Roaming\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge disk
+> & $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge disk
 
 
 Getting the % swap usage: 
-> & 'C:\Users\orriolsv\AppData\Roaming\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge swap
+> & $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge swap
