@@ -11,5 +11,6 @@ Contains the PowerShell scripts I use to get some extra info from HASS windows h
 Getting the % disk usage: 
 > & 'C:\Users\orriolsv\AppData\Roaming\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge disk
 
+
 Getting the % swap usage: 
 > & 'C:\Users\orriolsv\AppData\Roaming\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge swap
