@@ -8,6 +8,7 @@ Contains the PowerShell scripts I use to get some extra info from HASS windows h
 - Get the thru the PowerShellScript Sensor in HASS.Agent
 
 ### Configuration
+From admin powered powershell console:
 >Set-ExecutionPolicy -ExecutionPolicy unrestricted
 >
 >Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
