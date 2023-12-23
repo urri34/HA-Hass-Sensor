@@ -32,6 +32,10 @@ Powerhell command or script (for getting the % disk usage:)
 Powerhell command or script for getting the % swap usage: 
 > & $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge swap
 
+>Test command/script
+>Store sensor
+>Store and activate sensors
+
 ### HA configuration.yaml
 In order to force the incoming sensor to appear as % in HA, we need to force it with the following yaml code
 >#Sensor for HASS.Agent
