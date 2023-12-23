@@ -22,3 +22,17 @@ Getting the % disk usage:
 
 Getting the % swap usage: 
 > & $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge swap
+
+### HA configuration.yaml
+In order to force the incoming sensor to appear as % in HA, we need to force it with the following yaml code
+>#Sensor for HASS.Agent
+>homeassistant:
+>    customize:
+>        sensor.win_tv_diskusage:
+>            unit_of_measurement: '%'
+>        sensor.win_tv_swapusage:
+>            unit_of_measurement: '%'
+>        sensor.win_hpe_diskusage:
+>            unit_of_measurement: '%'
+>        sensor.win_hpe_swapusage:
+>            unit_of_measurement: '%'
