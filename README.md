@@ -43,7 +43,6 @@ Finally test and apply
 ### HA configuration.yaml
 In order to force the incoming sensor to appear as % in HA, we need to force it with the following yaml code
 
->
 >homeassistant:
 >
 >    customize:
