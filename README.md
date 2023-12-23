@@ -35,7 +35,9 @@ Powerhell command or script for getting the % swap usage:
 Finally test and apply
 
 >Test command/script
+>
 >Store sensor
+>
 >Store and activate sensors
 
 ### HA configuration.yaml
