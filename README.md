@@ -23,7 +23,8 @@ In the OS of the machine that you want to be monitored, open
 >
 >Update Every=60
 
-(Carefull because the swap mesure takes like 5 seconds)
+(Carefull because the swap mesure takes like 5 seconds, never set to less than 10)
+
 Powerhell command or script (for getting the % disk usage:)
 
 >& $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge disk
