@@ -32,6 +32,8 @@ Powerhell command or script (for getting the % disk usage:)
 Powerhell command or script for getting the % swap usage: 
 > & $env:APPDATA'\LAB02 Research\HASS.Agent\Sensors\DiskAndSwap.ps1' -percentatge swap
 
+Finally test and apply
+
 >Test command/script
 >Store sensor
 >Store and activate sensors
