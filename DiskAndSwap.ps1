@@ -4,15 +4,17 @@ param(
 
 function ObtindrePercentatgeDiskC {
     $diskInfo = Get-WmiObject Win32_LogicalDisk | Where-Object { $_.DeviceID -eq 'C:' }
-    $percentatgeFree = ($diskInfo.FreeSpace / $diskInfo.Size) * 100
+    $percentatgeFree = 100 - ($diskInfo.FreeSpace / $diskInfo.Size) * 100
     return '{0:N2}' -f $percentatgeFree
 }
 
 function ObtindrePercentatgeSwap {
 	$maxSizeStr = systeminfo | select-string "Virtual Memory: Max Size:"
-	$maxSize = [int][regex]::Matches($maxSizeStr, '[\d.]+').Value -replace "\.",""
+	$maxSizeStr = $maxSizeStr -replace "\.","" -replace ",",""
+	$maxSize = [int][regex]::Matches($maxSizeStr, '[\d.]+').Value
 	$inUseStr = systeminfo | select-string "Virtual Memory: In Use:"
-	$inUse = [int][regex]::Matches($inUseStr, '[\d.]+').Value -replace "\.",""
+	$inUseStr = $inUseStr -replace "\.","" -replace ",",""
+	$inUse = [int][regex]::Matches($inUseStr, '[\d.]+').Value
 	$swapUsage = ($inUse / $maxSize) * 100
     return '{0:N2}' -f $swapUsage
 }
